@@ -1,0 +1,102 @@
+
+body {
+
+    margin: 0;
+    padding: 0;
+}
+
+.takeOut {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.middle {
+    width: 1078px;
+    height: 560px;
+    margin: 0 auto;
+    border-top: 10px solid #cfcfcf;
+    border-bottom: 1px solid #99d767;
+    border-left: 1px solid #99d767;
+    border-right: 1px solid #99d767;
+}
+
+.navLeftMain {
+    width: 200px;
+    height: 560px;
+    float: left;
+    border-right: 5px solid #cfcfcf;
+}
+
+.takeOutContent {
+    width: 870px;
+    height: 559px;
+    float: right;
+    /*background-color: #ffcb5f;*/
+}
+
+.navOne {
+    background-color: #99d767;
+    width: 200px;
+    line-height: 35px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.navTwo {
+    width: 200px;
+    height: 239px;
+    display: none;
+}
+
+.navTwoSon {
+    width: 200px;
+    line-height: 35px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.navTwoSon a {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    background-color: #008002;
+    width: 1080px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.webTitle {
+    width: 800px;
+    line-height: 120px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 14px;
+    float: left;
+}
+
+.diningName {
+    width: 260px;
+    height: 120px;
+    line-height: 180px;
+    /*text-align:end;*/
+    /*底部对其*/
+    display: table-cell;
+    vertical-align: bottom;
+    vertical-align: text-top;
+    font-family: SimHei;
+    /*end*/
+    font-size: 45px;
+    letter-spacing: 10px;
+    font-weight: bolder;
+    /*字体镂空*/
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: transparent;
+    /*end*/
+    float: right;
+}

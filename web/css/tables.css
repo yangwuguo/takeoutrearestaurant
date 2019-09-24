@@ -1,0 +1,68 @@
+table {
+    width: 820px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #99d767;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    height: 30px;
+    padding: 0;
+    border: 1px solid #99d767;
+    font-size: 14px;
+}
+
+th {
+    padding-left: 5px;
+    background-color: #f3ffd6;
+    width: 820px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.contentBox {
+    margin: 0 auto;
+    width: 870px;
+    padding-top: 15px;
+}
+
+/*系统信息展示*/
+.infoName {
+    text-align: right;
+    width: 35%;
+}
+
+.infoText {
+    padding-left: 10px;
+    text-align: left;
+    width: 65%;
+}
+
+/*修改界面的更改*/
+[type=button] {
+    width: 50px;
+    height: 23px;
+    border: 0.5px #ababab double;
+    background-color: #f1f8b4;
+}
+
+[type=text] {
+    height: 23px;
+    border: 0.5px #ababab double;
+}
+
+/*展示界面的更改*/
+.showHeader {
+    background-color: #f3ffd6;
+}
+
+.showHeader td {
+    width: 205px;
+}
+
+.delOperation a{
+    color: black;
+    text-decoration: none;
+}

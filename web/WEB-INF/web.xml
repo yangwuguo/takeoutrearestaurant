@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+    <welcome-file-list>
+        <!--        <welcome-file>jsp/goods_all_list.jsp</welcome-file>-->
+        <!--        <welcome-file>jsp/judgeContent.jsp</welcome-file>-->
+        <welcome-file>jsp/admin_login.jsp</welcome-file>
+        <!--        <welcome-file>jsp/mainHome.jsp</welcome-file>-->
+    </welcome-file-list>
+
+    <!--    登录-->
+    <servlet>
+        <servlet-name>AdminLogin</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.adminaction.AdminLoginAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLogin</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <!--导航栏-->
+    <servlet>
+        <servlet-name>Nav</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.navaction.NavAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Nav</servlet-name>
+        <url-pattern>/nav</url-pattern>
+    </servlet-mapping>
+
+    <!-- 系统信息-->
+    <servlet>
+        <servlet-name>SystemInfo</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.systemaction.SystemInfoAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SystemInfo</servlet-name>
+        <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+
+    <!-- 修改密码-->
+    <servlet>
+        <servlet-name>changePasswordAction</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.adminaction.UpdatePasswordAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>changePasswordAction</servlet-name>
+        <url-pattern>/change</url-pattern>
+    </servlet-mapping>
+
+    <!-- 展示所有用户的信息-->
+    <servlet>
+        <servlet-name>adShowAction</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.adminaction.AdShowAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adShowAction</servlet-name>
+        <url-pattern>/adShow</url-pattern>
+    </servlet-mapping>
+
+    <!-- 删除管理员的信息-->
+    <servlet>
+        <servlet-name>adDeleteAction</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.adminaction.AdDeleteAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adDeleteAction</servlet-name>
+        <url-pattern>/adDel</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 添加管理员用户-->
+    <servlet>
+        <servlet-name>InsertAdmin</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.adminaction.InsertAdminAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertAdmin</servlet-name>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 图片上传-->
+    <servlet>
+        <servlet-name>UploadAction</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.imgaction.UploadAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadAction</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <!--图片保存路径-->
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>dish-img-src</param-name>
+        <param-value>
+            E:\Wuguo\takeoutrearestaurant\web\images\dish\
+        </param-value>
+    </context-param>
+
+    <!--文件下载-->
+    <servlet>
+        <servlet-name>ImageShow</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.imgaction.SrcShowAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImageShow</servlet-name>
+        <url-pattern>/imgShow</url-pattern>
+    </servlet-mapping>
+
+    <!--菜品展示-->
+    <servlet>
+        <servlet-name>GoodsShow</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.goodsAction.GoodsShowAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsShow</servlet-name>
+        <url-pattern>/goodsShow</url-pattern>
+    </servlet-mapping>
+
+    <!--菜品删除-->
+    <servlet>
+        <servlet-name>GoodsDel</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.goodsAction.GoodsDelAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsDel</servlet-name>
+        <url-pattern>/goodsDel</url-pattern>
+    </servlet-mapping>
+
+    <!--菜品添加-->
+    <servlet>
+        <servlet-name>GoodsInsert</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.goodsAction.GoodsInsertAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsInsert</servlet-name>
+        <url-pattern>/goodsInsert</url-pattern>
+    </servlet-mapping>
+
+    <!--菜品修改-->
+    <servlet>
+        <servlet-name>GoodsUpData</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.goodsAction.GoodsUpdateAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsUpData</servlet-name>
+        <url-pattern>/goodsUpDate</url-pattern>
+    </servlet-mapping>
+
+    <!--菜品修改-->
+    <servlet>
+        <servlet-name>getCatelogName</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.catelog.getCatelogNameAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCatelogName</servlet-name>
+        <url-pattern>/getCatelogName</url-pattern>
+    </servlet-mapping>
+
+    <!--用户展示-->
+    <servlet>
+        <servlet-name>UserShow</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.user.UserShowAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserShow</servlet-name>
+        <url-pattern>/userShow</url-pattern>
+    </servlet-mapping>
+
+    <!--用户删除-->
+    <servlet>
+        <servlet-name>UserDelete</servlet-name>
+        <servlet-class>cn.wanxi.manage.web.action.user.UserDelectAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDelete</servlet-name>
+        <url-pattern>/userDelete</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
+
+        <!--    &lt;!&ndash;文件下载&ndash;&gt;-->
+        <!--    <servlet>-->
+        <!--        <servlet-name>Download</servlet-name>-->
+        <!--        <servlet-class>cn.wanxi.manage.web.action.judgeContent.DownloadAction</servlet-class>-->
+        <!--    </servlet>-->
+        <!--    <servlet-mapping>-->
+        <!--        <servlet-name>Download</servlet-name>-->
+        <!--        <url-pattern>/download</url-pattern>-->
+        <!--    </servlet-mapping>-->
